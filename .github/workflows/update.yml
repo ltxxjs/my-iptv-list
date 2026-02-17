@@ -7,6 +7,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # 显式增加写权限，确保 Action 有权提交文件到你的仓库
+    permissions:
+      contents: write
+      
     steps:
       - uses: actions/checkout@v3
 
@@ -15,19 +19,23 @@ jobs:
         with:
           python-version: '3.x'
 
-      # --- 关键：就是少了这一步，导致一直报 requests 找不到 ---
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
       - name: Run Filter
-        run: |
-          python filter.py
+        run: python filter.py
 
       - name: Commit and Push
         run: |
           git config --global user.name "Github Action"
           git config --global user.email "action@github.com"
-          git add cn_tw.m3u cn_tw.txt  # 这里同时添加两个文件
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update IPTV lists (m3u/txt)" && git push)
+          git add cn_tw.m3u cn_tw.txt
+          # 只有在有变动时才提交，防止 Action 因空提交而显示失败
+          if ! git diff --staged --quiet; then
+            git commit -m "Update IPTV lists: $(date +'%Y-%m-%d %H:%M:%S')"
+            git push
+          else
+            echo "No changes detected, skipping push."
+          fi
