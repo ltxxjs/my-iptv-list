@@ -11,7 +11,7 @@ sources = {
 def check_url(channel):
     """检测链接是否可用 (超时时间设为3秒)"""
     try:
-        response = requests.head(channel['url'], timeout=3, allow_redirects=True)
+        response = requests.head(channel['url'], timeout=10, allow_redirects=True)
         if response.status_code == 200:
             return channel
     except:
@@ -52,12 +52,8 @@ def fetch_and_clean():
         except Exception as e:
             print(f"抓取 {region} 失败: {e}")
 
-    # 3. 多线程检测死链
-    print(f"正在检测死链，总计 {len(all_channels)} 个频道...")
-    valid_channels = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-        results = list(executor.map(check_url, all_channels))
-        valid_channels = [c for c in results if c is not None]
+    # 直接跳过检测，使用所有抓取到的频道
+valid_channels = all_channels
 
     # 4. 排序逻辑
     sort_order = {"中央台": 0, "卫视": 1, "地方台": 2, "台湾频道": 3, "其他": 4}
