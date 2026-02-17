@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      # --- 关键修复步骤：安装依赖 ---
+      # --- 关键修复：安装脚本运行所需的库 ---
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -30,5 +30,5 @@ jobs:
           git config --global user.name "Github Action"
           git config --global user.email "action@github.com"
           git add cn_tw.m3u
-          # 只有当文件有变化时才提交，防止报错
+          # 只有在文件有变动时才提交，避免没变化时报错
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update IPTV list" && git push)
