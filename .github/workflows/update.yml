@@ -9,17 +9,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
+      # --- 关键修复步骤：安装依赖 ---
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
       - name: Run Filter
         run: |
           python filter.py
+
       - name: Commit and Push
         run: |
           git config --global user.name "Github Action"
           git config --global user.email "action@github.com"
           git add cn_tw.m3u
-          git commit -m "Update IPTV list" || exit 0
-          git push
+          # 只有当文件有变化时才提交，防止报错
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update IPTV list" && git push)
