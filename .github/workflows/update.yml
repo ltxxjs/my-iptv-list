@@ -1,8 +1,8 @@
 name: Update IPTV List
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天凌晨自动执行
-  workflow_dispatch:   # 允许手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch: 
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      # --- 关键修复步骤：安装脚本运行所需的库 ---
+      # --- 关键：就是少了这一步，导致一直报 requests 找不到 ---
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -30,5 +30,4 @@ jobs:
           git config --global user.name "Github Action"
           git config --global user.email "action@github.com"
           git add cn_tw.m3u
-          # 只有在文件有变动时才提交，避免因为“无变动”导致报错
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update IPTV list" && git push)
