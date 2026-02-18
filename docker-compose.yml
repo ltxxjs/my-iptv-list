@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  iptv-filter:
+    build: .
+    container_name: iptv-filter
+    volumes:
+      - iptv_data:/app/data  # 使用具名卷存储数据
+
+  scheduler:
+    image: mcuadros/ofelia:latest
+    container_name: iptv-scheduler
+    depends_on:
+      - iptv-filter
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    command: daemon --docker
+    labels:
+      - "ofelia.enabled=true"
+      - "ofelia.job-exec.iptv-run.schedule=@every 6h"
+      - "ofelia.job-exec.iptv-run.command=python filter.py"
+
+  iptv-web:
+    image: nginx:alpine
+    container_name: iptv-web
+    ports:
+      - "8080:80"
+    volumes:
+      - iptv_data:/usr/share/nginx/html:ro
+    restart: always
+
+volumes:
+  iptv_data:
