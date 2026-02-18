@@ -2,17 +2,19 @@ import requests
 import re
 import os
 
-# 综合源：全部套用加速前缀，确保小主机抓取不超时
+# 综合源：涵盖 IPv6 精品流与 IPv4 地市流
 sources = {
     "Fanmingming_V6": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
     "YueChan_IPTV": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+    "Heros_IPv4": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/herosylee/iptv/main/live.m3u",
+    "ITV_Local": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u",
     "Guovern_Live": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u",
     "HK_Special": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u"
 }
 
-# 省份/关键词字典
+# 详尽的省份/地市映射表
 PROVINCES = {
-"北京": ["北京", "京台", "BTV"],
+    "北京": ["北京", "京台", "BTV"],
     "上海": ["上海", "东方卫视", "哈哈炫动"],
     "天津": ["天津"],
     "重庆": ["重庆"],
@@ -47,23 +49,22 @@ PROVINCES = {
 
 def fetch_and_clean():
     all_channels = []
-    seen_urls = set()  # 用于 URL 去重，但允许频道名重复
+    seen_urls = set()
 
     for name, url in sources.items():
         print(f"正在抓取: {name}...")
         try:
-            r = requests.get(url, timeout=20)
-            # 增强型正则：兼容更多 M3U 格式
+            r = requests.get(url, timeout=30)
+            r.encoding = 'utf-8' # 解决中文乱码
             matches = re.findall(r'#EXTINF:.*?,(.*?)\n(http.*)', r.text)
             for channel_name, link in matches:
                 link = link.strip()
                 if link in seen_urls: continue
                 
-                # 预处理名称
                 name_u = channel_name.strip().upper()
                 is_ipv6 = "[" in link and "]" in link
                 
-                # 分类逻辑
+                # 分类核心逻辑
                 group = "其他"
                 if any(x in name_u for x in ["HK", "香港", "翡翠", "TVB", "凤凰", "澳门", "MO", "莲花"]):
                     group = "港澳电视"
@@ -81,7 +82,7 @@ def fetch_and_clean():
                             found_prov = True
                             break
                     if not found_prov and any(x in name_u for x in ["台", "频道", "广播"]):
-                        group = "地方台"
+                        group = "地方频道"
 
                 if group != "其他":
                     all_channels.append({
@@ -94,42 +95,40 @@ def fetch_and_clean():
         except Exception as e:
             print(f"抓取 {name} 失败: {e}")
 
-    # 排序核心逻辑：组顺序 -> 频道名 -> IPv4 优先(0) -> IPv6 后置(1)
+    # 定义分组置顶顺序
+    group_order = {"中央台": 0, "卫视": 1, "港澳电视": 2, "台湾电视": 3}
+
+    # 排序：组权重 -> 组名 -> 频道名 -> IPv4在前(0)
     all_channels.sort(key=lambda x: (
-        {"中央台": 0, "卫视": 1, "港澳电视": 2, "台湾电视": 3}.get(x['group'], 10),
+        group_order.get(x['group'], 10),
         x['group'],
         x['name'],
-        1 if x['v6'] else 0  # 电视不通 IPv6，所以把 IPv4 放在第一位
+        1 if x['v6'] else 0
     ))
 
-    # 处理 Docker 环境路径
     prefix = "data/" if (os.path.exists("/.dockerenv") or os.environ.get("DOCKER_RUNTIME")) else ""
     if prefix: os.makedirs(prefix, exist_ok=True)
 
-    # 写入两个文件
-    # 1. cn_tw.txt (全量，电脑用)
-    # 2. tv_v4.txt (纯 IPv4，海信电视专用)
     with open(f"{prefix}cn_tw.txt", "w", encoding="utf-8") as f_all, \
          open(f"{prefix}tv_v4.txt", "w", encoding="utf-8") as f_v4:
         
-        curr_g_all = None
-        curr_g_v4 = None
+        curr_g_all, curr_g_v4 = None, None
         
         for c in all_channels:
-            # 写入全量列表
+            # 写入全量文件
             if c['group'] != curr_g_all:
                 curr_g_all = c['group']
                 f_all.write(f"{curr_g_all},#genre#\n")
             f_all.write(f"{c['name']},{c['url']}\n")
             
-            # 写入纯 IPv4 列表
+            # 写入纯 IPv4 文件 (给海信电视)
             if not c['v6']:
                 if c['group'] != curr_g_v4:
                     curr_g_v4 = c['group']
                     f_v4.write(f"{curr_g_v4},#genre#\n")
                 f_v4.write(f"{c['name']},{c['url']}\n")
             
-    print(f"处理完成！共保存 {len(all_channels)} 个链接。")
+    print(f"处理完成！tv_v4.txt 已生成。")
 
 if __name__ == "__main__":
     fetch_and_clean()
