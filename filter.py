@@ -4,11 +4,11 @@ import os
 
 # 1. 核心源：增加 IPv4 占比高的源，确保海信电视有台看
 sources = {
-    "Heros_IPv4": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/herosylee/iptv/main/live.m3u",
-    "ITV_Local": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u",
-    "YueChan_IPTV": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
-    "Guovern_Live": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u",
-    "HK_Special": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u"
+    "Heros_IPv4": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/herosylee/iptv/main/live.m3u",
+    "ITV_Local": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u",
+    "YueChan_IPTV": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+    "Guovern_Live": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u",
+    "HK_Special": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u"
 }
 
 # 2. 恢复你提供的详尽地区分类字典
