@@ -24,7 +24,7 @@ services:
     image: nginx:alpine
     container_name: iptv-web
     ports:
-      - "8080:80"
+      - "28024:80"
     volumes:
       - iptv_data:/usr/share/nginx/html:ro
     restart: always
