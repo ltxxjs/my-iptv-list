@@ -4,10 +4,10 @@ import os
 
 # 综合源
 sources = {
-    "Fanmingming_V6": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-    "YueChan_IPTV": "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
-    "Guovern_Live": "https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u",
-    "HK_Special": "https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u"
+    "Fanmingming_V6": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+    "YueChan_IPTV": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+    "Guovern_Live": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u",
+    "HK_Special": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u"
 }
 
 # 关键词字典保持不变 (此处省略具体内容以节省篇幅，请沿用上个版本的 PROVINCES 字典)
