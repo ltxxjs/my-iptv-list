@@ -10,6 +10,9 @@ sources = {
     "Fanmingming_V6": f"{PROXY}https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
     "YueChan_IPv6": f"{PROXY}https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
     "Moexin_HK": f"{PROXY}https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u",
+    "IPTV_Org_CN": "https://iptv-org.github.io/iptv/countries/cn.m3u",
+    "IPTV_Org_HK": "https://iptv-org.github.io/iptv/countries/hk.m3u",
+    "IPTV_Org_TW": "https://iptv-org.github.io/iptv/countries/tw.m3u"
 }
 
 # 2. 扩充后的省份识别（包含更多缩写和地方台特征）
