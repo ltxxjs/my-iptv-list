@@ -2,21 +2,28 @@ import requests
 import re
 import os
 
-# 1. 核心源：使用用户提供的更稳定的加速接口 https://gh-proxy.phd.qzz.io/
+# 1. 核心源：增加专门的港澳台整合源
 PROXY = "https://gh-proxy.phd.qzz.io/"
 sources = {
     "Fanmingming_V6": f"{PROXY}https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
     "YueChan_IPv6": f"{PROXY}https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+    "Moexin_HK": f"{PROXY}https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u", # 专门的香港源
+    "YanG_IPv6": f"{PROXY}https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u", # 综合源
     "IPTV_Org_CN": "https://iptv-org.github.io/iptv/countries/cn.m3u",
     "IPTV_Org_HK": "https://iptv-org.github.io/iptv/countries/hk.m3u",
-    "IPTV_Org_TW": "https://iptv-org.github.io/iptv/countries/tw.m3u",
-    "Heros_Live": f"{PROXY}https://raw.githubusercontent.com/herosylee/iptv/main/live.m3u",
-    "Guovern_Live": f"{PROXY}https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u"
+    "IPTV_Org_TW": "https://iptv-org.github.io/iptv/countries/tw.m3u"
 }
 
-# 2. 全量分类：涵盖 34 个省级行政区及其主要地市
+# 2. 扩充港澳台关键词，防止漏掉
+SPECIAL_REGIONS = {
+    "香港频道": ["香港", "HK", "翡翠", "TVB", "J2", "RTHK", "凤凰", "Viu", "天映", "中天"],
+    "澳门频道": ["澳门", "MACAU", "莲花", "澳视"],
+    "台湾频道": ["台湾", "TW", "TAIWAN", "中视", "华视", "民视", "年代", "东森", "三立", "非凡", "龙华"]
+}
+
+# 省份分类保持全量
 PROVINCES = {
-    "北京": ["北京", "京台", "BTV"],
+   "北京": ["北京", "京台", "BTV"],
     "上海": ["上海", "东方卫视", "哈哈炫动"],
     "天津": ["天津", "津台"],
     "重庆": ["重庆", "CQTV"],
@@ -49,12 +56,6 @@ PROVINCES = {
     "海南": ["海南", "海口", "三亚", "三沙", "儋州"]
 }
 
-SPECIAL_REGIONS = {
-    "香港频道": ["香港", "HK", "翡翠", "TVB", "凤凰"],
-    "澳门频道": ["澳门", "MACAU", "莲花"],
-    "台湾频道": ["台湾", "TW", "中视", "华视", "民视", "年代", "东森"]
-}
-
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
 
 def fetch_and_clean():
@@ -63,49 +64,52 @@ def fetch_and_clean():
     
     is_github = os.environ.get('GITHUB_ACTIONS') == 'true'
     prefix = "" if is_github else "data/"
-    if prefix and not os.path.exists(prefix): os.makedirs(prefix)
 
     for name, url in sources.items():
-        print(f"正在抓取: {name} (使用加速接口)...")
+        print(f"正在抓取: {name}...")
         try:
             r = requests.get(url, headers=HEADERS, timeout=30)
             r.encoding = 'utf-8'
             if r.status_code != 200: continue
-            matches = re.findall(r'#EXTINF:.*?,(.*?)\n(http.*)', r.text)
+
+            # --- 关键改动：更强大的正则，兼容带标签的 M3U ---
+            # 解释：匹配 #EXTINF 后面直到逗号的所有内容，然后取逗号后的频道名，再换行取链接
+            matches = re.findall(r'#EXTINF:.*?,(.*?)\n(http.*?)(?:\n|$)', r.text, re.DOTALL)
             
             for ch_name, link in matches:
-                link = link.strip()
+                link = link.strip().split('\n')[0] # 确保只取第一行链接
                 if link in seen_urls: continue
+                
                 name_u = ch_name.strip().upper()
                 is_v6 = "[" in link and "]" in link
                 
                 group = None
-                if any(x in name_u for x in ["CCTV", "CGTN", "中央"]): 
-                    group = "中央台"
-                elif "卫视" in name_u: 
-                    group = "卫视"
-                else:
-                    for g_name, keywords in SPECIAL_REGIONS.items():
-                        if any(k in name_u for k in keywords):
-                            group = g_name
-                            break
+                # 优先匹配港澳台 (因为有些源会把 TVB 放在“其他”里)
+                for g_name, keywords in SPECIAL_REGIONS.items():
+                    if any(k in name_u for k in keywords):
+                        group = g_name
+                        break
                 
                 if not group:
-                    for prov, keywords in PROVINCES.items():
-                        if any(k in name_u for k in keywords):
-                            group = f"{prov}频道"
-                            break
+                    if any(x in name_u for x in ["CCTV", "CGTN", "中央台"]): group = "中央台"
+                    elif "卫视" in name_u: group = "卫视"
+                    else:
+                        for prov, keywords in PROVINCES.items():
+                            if any(k in name_u for k in keywords):
+                                group = f"{prov}频道"
+                                break
                 
                 if group:
                     all_channels.append({"name": ch_name.strip(), "url": link, "group": group, "v6": is_v6})
                     seen_urls.add(link)
-        except: continue
+        except Exception as e:
+            print(f"源 {name} 抓取异常: {e}")
 
-    # 排序：中央台 > 卫视 > 港澳台 > 各省
+    # 排序
     group_order = {"中央台": 0, "卫视": 1, "香港频道": 2, "澳门频道": 3, "台湾频道": 4}
     all_channels.sort(key=lambda x: (group_order.get(x['group'], 10), x['group'], 0 if x['v6'] else 1, x['name']))
 
-    # 写入文件
+    # 写入
     with open(f"{prefix}cn_tw.m3u", "w", encoding="utf-8") as f_m3u, \
          open(f"{prefix}cn_tw.txt", "w", encoding="utf-8") as f_txt, \
          open(f"{prefix}tv_all.txt", "w", encoding="utf-8") as f_all:
@@ -125,7 +129,7 @@ def fetch_and_clean():
             f_txt.write(line)
             f_all.write(line)
 
-    print(f"✨ 加速接口更新完成！全量中文+IPv6 列表同步成功。")
+    print(f"✨ 同步完成！共提取 {len(all_channels)} 个中文频道线路。")
 
 if __name__ == "__main__":
     fetch_and_clean()
