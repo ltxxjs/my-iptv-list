@@ -12,6 +12,11 @@ sources = {
     "IPTV_Org_TW": "https://iptv-org.github.io/iptv/countries/tw.m3u",
     # 优质补充源（用于覆盖更多地方台和IPv6）
     "YanG_Gather": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+    "YanG_Gather": f"{PROXY}https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+    "Guovern_Live": f"{PROXY}https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u",
+    "Fanmingming_V6": f"{PROXY}https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+    "YueChan_IPv6": f"{PROXY}https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+    "Moexin_HK": f"{PROXY}https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u"
     "Guovern_Live": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u"
 }
 
