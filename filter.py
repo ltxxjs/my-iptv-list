@@ -2,6 +2,9 @@ import requests
 import re
 import os
 
+# 定义代理前缀，修复 NameError 报错
+PROXY = "https://gh-proxy.phd.qzz.io/"
+
 # ==========================================
 # 核心数据源：IPTV-Org (置顶) + 补充聚合源
 # ==========================================
