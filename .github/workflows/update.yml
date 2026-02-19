@@ -19,19 +19,17 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
+        run: pip install requests
 
       - name: Run Filter
         run: python filter.py
 
       - name: Commit and Push
         run: |
-          git config --global user.name "Github Action"
-          git config --global user.email "action@github.com"
-          # 关键改动：添加仓库下所有的 txt 和 m3u 文件
-          git add *.txt *.m3u 
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          # 使用你要求的模糊匹配，自动追踪所有 txt 和 m3u
+          git add *.txt *.m3u
           if ! git diff --staged --quiet; then
             git commit -m "Update IPTV lists: $(date +'%Y-%m-%d %H:%M:%S')"
             git push
