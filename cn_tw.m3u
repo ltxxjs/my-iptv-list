@@ -203,6 +203,8 @@ http://39.134.39.37/PLTV/88888888/224/3221226209/index.m3u8
 http://118.81.195.79:9003/hls/22/index.m3u8
 #EXTINF:-1 group-title="卫视",青海卫视 (1080p)
 http://live.geermurmt.com/qhws/sd/live.m3u8
+#EXTINF:-1 group-title="香港频道",CTi Variety (中天綜合台) (720p)
+http://23.237.10.66:16372
 #EXTINF:-1 group-title="香港频道",RTHK TV 31 (港台電視31) (1080p) [Geo-blocked]
 https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 group-title="香港频道",RTHK TV 32 (港台電視32) (1080p) [Geo-blocked]
@@ -215,10 +217,16 @@ https://rthktv34-live.akamaized.net/hls/live/2101642/RTHKTV34/master.m3u8
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
 #EXTINF:-1 group-title="香港频道",TVBS News (TVBS新聞台) [Geo-blocked]
 http://seb.sason.top/sc/tvbsxw_fhd.m3u8
+#EXTINF:-1 group-title="香港频道",中天新聞台 (1080p)
+https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV28.m3u8
 #EXTINF:-1 group-title="香港频道",凤凰中文 (720p)
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 group-title="香港频道",凤凰资讯 (720p)
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 group-title="台湾频道",SET News (三立新聞) (1080p) [Geo-blocked]
+http://seb.sason.top/sc/sllive_fhd.m3u8
+#EXTINF:-1 group-title="台湾频道",Taiwan Indigenous TV (原住民電視) (720p)
+http://streamipcf.akamaized.net/live/_definst_/live_720/key_b1500.m3u8
 #EXTINF:-1 group-title="内蒙古频道",乌兰察布新闻
 https://livestream-bt.nmtv.cn/nmtv/2354general.m3u8?txSecret=cf5f71d0000862b18f5813607b3dfd5b&txTime=771E8800
 #EXTINF:-1 group-title="内蒙古频道",包头新闻综合
