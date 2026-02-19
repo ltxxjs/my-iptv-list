@@ -2,129 +2,88 @@ import requests
 import re
 import os
 
-# 1. 换用更全、更稳定的源 (包含大量地方台)
-PROXY = "https://gh-proxy.phd.qzz.io/"
+# ==========================================
+# 核心数据源：IPTV-Org (置顶) + 补充聚合源
+# ==========================================
 sources = {
-    "YanG_Gather": f"{PROXY}https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u", # 核心：包含超多地方台
-    "Guovern_Live": f"{PROXY}https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u", # 核心：分类详尽
-    "Fanmingming_V6": f"{PROXY}https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
-    "YueChan_IPv6": f"{PROXY}https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
-    "Moexin_HK": f"{PROXY}https://raw.githubusercontent.com/Moexin/IPTV/master/HK.m3u",
+    # 你最开始要求的 IPTV-Org 官方源
     "IPTV_Org_CN": "https://iptv-org.github.io/iptv/countries/cn.m3u",
     "IPTV_Org_HK": "https://iptv-org.github.io/iptv/countries/hk.m3u",
-    "IPTV_Org_TW": "https://iptv-org.github.io/iptv/countries/tw.m3u"
+    "IPTV_Org_TW": "https://iptv-org.github.io/iptv/countries/tw.m3u",
+    # 优质补充源（用于覆盖更多地方台和IPv6）
+    "YanG_Gather": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+    "Guovern_Live": "https://gh-proxy.phd.qzz.io/https://raw.githubusercontent.com/Guovern/tv-list/main/m3u/live.m3u"
 }
 
-# 2. 扩充后的省份识别（包含更多缩写和地方台特征）
-PROVINCES = {
-   "北京": ["北京", "京台", "BTV"],
-    "上海": ["上海", "东方卫视", "哈哈炫动"],
-    "天津": ["天津", "津台"],
-    "重庆": ["重庆", "CQTV"],
-    "广东": ["广东", "广州", "深圳", "珠海", "汕头", "佛山", "韶关", "湛江", "肇庆", "江门", "茂名", "惠州", "梅州", "汕尾", "河源", "阳江", "清远", "东莞", "中山", "潮州", "揭阳", "云浮"],
-    "江苏": ["江苏", "南京", "苏州", "无锡", "常州", "扬州", "南通", "泰州", "盐城", "淮安", "徐州", "连云港", "宿迁"],
-    "浙江": ["浙江", "杭州", "宁波", "温州", "嘉兴", "湖州", "绍兴", "金华", "衢州", "舟山", "台州", "丽水"],
-    "山东": ["山东", "济南", "青岛", "淄博", "枣庄", "东营", "烟台", "潍坊", "济宁", "泰安", "威海", "日照", "临沂", "德州", "聊城", "滨州", "菏泽"],
-    "河南": ["河南", "郑州", "开封", "洛阳", "平顶山", "安阳", "鹤壁", "新乡", "焦作", "濮阳", "许昌", "漯河", "三门峡", "南阳", "商丘", "信阳", "周口", "驻马店"],
-    "河北": ["河北", "石家庄", "唐山", "秦皇岛", "邯郸", "邢台", "保定", "张家口", "承德", "沧州", "廊坊", "衡水"],
-    "湖南": ["湖南", "长沙", "株洲", "湘潭", "衡阳", "邵阳", "岳阳", "常德", "张家界", "益阳", "郴州", "永州", "怀化", "娄底", "湘西"],
-    "湖北": ["湖北", "武汉", "黄石", "十堰", "宜昌", "襄阳", "鄂州", "荆门", "孝感", "荆州", "黄冈", "咸宁", "随州", "恩施", "仙桃", "天门", "潜江"],
-    "四川": ["四川", "成都", "自贡", "攀枝花", "泸州", "德阳", "绵阳", "广元", "遂宁", "内江", "乐山", "南充", "眉山", "宜宾", "广安", "达州", "雅安", "巴中", "资阳", "阿坝", "甘孜", "凉山"],
-    "福建": ["福建", "福州", "厦门", "莆田", "三明", "泉州", "漳州", "南平", "龙岩", "宁德"],
-    "安徽": ["安徽", "合肥", "芜湖", "蚌埠", "淮南", "马鞍山", "淮北", "铜陵", "安庆", "黄山", "滁州", "阜阳", "宿州", "六安", "亳州", "池州", "宣城"],
-    "江西": ["江西", "南昌", "景德镇", "萍乡", "九江", "新余", "鹰潭", "赣州", "吉安", "宜春", "抚州", "上饶"],
-    "辽宁": ["辽宁", "沈阳", "大连", "鞍山", "抚顺", "本溪", "丹东", "锦州", "营口", "阜新", "辽阳", "盘锦", "铁岭", "朝阳", "葫芦岛"],
-    "吉林": ["吉林", "长春", "四平", "辽源", "通化", "白山", "松原", "白城", "延边"],
-    "黑龙江": ["黑龙江", "哈尔滨", "齐齐哈尔", "鸡西", "鹤岗", "双鸭山", "大庆", "伊春", "佳木斯", "七台河", "牡丹江", "黑河", "绥化", "大兴安岭"],
-    "陕西": ["陕西", "西安", "宝鸡", "咸阳", "渭南", "延安", "汉中", "榆林", "安康", "商洛"],
-    "山西": ["山西", "太原", "大同", "阳泉", "长治", "晋城", "朔州", "晋中", "运城", "忻州", "临汾", "吕梁"],
-    "甘肃": ["甘肃", "兰州", "嘉峪关", "金昌", "白银", "天水", "武威", "张掖", "平凉", "酒泉", "庆阳", "定西", "陇南", "临夏", "甘南"],
-    "贵州": ["贵州", "贵阳", "六盘水", "遵义", "安顺", "毕节", "铜仁", "黔西南", "黔东南", "黔南"],
-    "云南": ["云南", "昆明", "曲靖", "玉溪", "保山", "昭通", "丽江", "普洱", "临沧", "楚雄", "红河", "文山", "西双版纳", "大理", "德宏", "怒江", "迪庆"],
-    "广西": ["广西", "南宁", "柳州", "桂林", "梧州", "北海", "防城港", "钦州", "贵港", "玉林", "百色", "贺州", "河池", "来宾", "崇左"],
-    "内蒙古": ["内蒙古", "呼和浩特", "包头", "乌海", "赤峰", "通辽", "鄂尔多斯", "呼伦贝尔", "巴彦淖尔", "乌兰察布", "兴安", "锡林郭勒", "阿拉善"],
-    "新疆": ["新疆", "乌鲁木齐", "克拉玛依", "吐鲁番", "哈密", "昌吉", "博尔塔拉", "巴音郭楞", "阿克苏", "克孜勒苏", "喀什", "和田", "伊犁", "塔城", "阿勒泰"],
-    "宁夏": ["宁夏", "银川", "石嘴山", "吴忠", "固原", "中卫"],
-    "青海": ["青海", "西宁", "海东", "海北", "黄南", "海南州", "果洛", "玉树", "海西"],
-    "西藏": ["西藏", "拉萨", "日喀则", "昌都", "林芝", "山南", "那曲", "阿里"],
-    "海南": ["海南", "海口", "三亚", "三沙", "儋州"]
+HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'}
 
-}
+def get_group(name):
+    n = name.upper()
+    if any(x in n for x in ["CCTV", "CGTN", "中央"]): return "中央台"
+    if "卫视" in n: return "卫视"
+    if any(x in n for x in ["香港", "翡翠", "凤凰", "HK", "TVB"]): return "香港频道"
+    if any(x in n for x in ["台湾", "TW", "东森", "中视", "三立"]): return "台湾频道"
+    # 自动识别省份
+    provinces = ["广东", "北京", "上海", "湖南", "浙江", "江苏", "四川", "湖北", "山东", "福建"]
+    for p in provinces:
+        if p in n: return f"{p}频道"
+    return "地方及其他"
 
-SPECIAL_REGIONS = {
-    "香港频道": ["香港", "HK", "翡翠", "TVB", "凤凰", "J2", "RTHK", "Viu"],
-    "澳门频道": ["澳门", "MACAU", "莲花", "澳视"],
-    "台湾频道": ["台湾", "TW", "中视", "华视", "民视", "东森", "三立", "非凡", "纬来", "年代"]
-}
+def run():
+    all_ch = []
+    urls = set()
 
-HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
-
-def fetch_and_clean():
-    all_channels = []
-    seen_urls = set()
-    
-    is_github = os.environ.get('GITHUB_ACTIONS') == 'true'
-    prefix = "" if is_github else "data/"
-
-    for s_name, url in sources.items():
+    for s_name, s_url in sources.items():
         print(f"正在抓取: {s_name}...")
         try:
-            r = requests.get(url, headers=HEADERS, timeout=30)
+            r = requests.get(s_url, headers=HEADERS, timeout=20)
             r.encoding = 'utf-8'
             if r.status_code != 200: continue
-
-            # 改进的块解析逻辑
+            
+            # 改进的正则解析
             items = re.findall(r'#EXTINF:.*?,(.*?)\n(http.*?)(?:\n|$)', r.text, re.DOTALL)
             
             for name, link in items:
-                link = link.strip().split('\n')[0]
-                if link in seen_urls: continue
+                link = link.strip().split('\n')[0].strip()
+                if link in urls or not link.startswith("http"): continue
                 
-                name_u = name.strip().upper()
-                is_v6 = "[" in link and "]" in link
+                name_clean = name.strip()
+                group = get_group(name_clean)
                 
-                group = None
-                # 1. 央视/卫视
-                if any(x in name_u for x in ["CCTV", "CGTN", "中央"]): group = "中央台"
-                elif "卫视" in name_u: group = "卫视"
-                
-                # 2. 港澳台
-                if not group:
-                    for g_name, keywords in SPECIAL_REGIONS.items():
-                        if any(k in name_u for k in keywords):
-                            group = g_name
-                            break
-                
-                # 3. 匹配省份
-                if not group:
-                    for prov, keywords in PROVINCES.items():
-                        if any(k in name_u for k in keywords):
-                            group = f"{prov}频道"
-                            break
-                
-                # 4. 【核心改进】找不到归类的通通标记为“地方及综合”
-                if not group:
-                    group = "地方及综合"
+                all_ch.append({
+                    "name": name_clean,
+                    "url": link,
+                    "group": group,
+                    "v6": "[" in link
+                })
+                urls.add(link)
+        except Exception as e:
+            print(f"抓取 {s_name} 失败: {e}")
 
-                all_channels.append({"name": name.strip(), "url": link, "group": group, "v6": is_v6})
-                seen_urls.add(link)
-        except: continue
+    # 排序逻辑
+    group_order = {"中央台": 0, "卫视": 1, "香港频道": 2, "台湾频道": 3}
+    all_ch.sort(key=lambda x: (group_order.get(x['group'], 50), x['group'], x['name']))
 
-    # 排序逻辑：中央 > 卫视 > 港澳台 > 各省 > 地方及综合
-    group_order = {"中央台": 0, "卫视": 1, "香港频道": 2, "澳门频道": 3, "台湾频道": 4}
-    all_channels.sort(key=lambda x: (group_order.get(x['group'], 50), x['group'], 0 if x['v6'] else 1, x['name']))
+    # --- 同步写入所有 TXT 文件 ---
+    target_files = ["cn_tw.txt", "tv_all.txt"]
+    for fname in target_files:
+        with open(fname, "w", encoding="utf-8") as f:
+            curr_g = None
+            for c in all_ch:
+                if c['group'] != curr_g:
+                    curr_g = c['group']
+                    f.write(f"{curr_g},#genre#\n")
+                v6_tag = " (IPv6)" if c['v6'] else ""
+                f.write(f"{c['name']}{v6_tag},{c['url']}\n")
 
-    # 写入 tv_all.txt
-    with open(f"{prefix}tv_all.txt", "w", encoding="utf-8") as f:
-        curr_g = None
-        for c in all_channels:
-            if c['group'] != curr_g:
-                curr_g = c['group']
-                f.write(f"{curr_g},#genre#\n")
+    # --- 写入 M3U 文件 ---
+    with open("cn_tw.m3u", "w", encoding="utf-8") as f:
+        f.write("#EXTM3U\n")
+        for c in all_ch:
             v6_tag = " (IPv6)" if c['v6'] else ""
-            f.write(f"{c['name']}{v6_tag},{c['url']}\n")
+            f.write(f'#EXTINF:-1 group-title="{c["group"]}",{c["name"]}{v6_tag}\n{c["url"]}\n')
 
-    print(f"✨ 同步完成！共提取 {len(all_channels)} 条线路。")
+    print(f"更新完成！共抓取 {len(all_ch)} 个频道。")
 
 if __name__ == "__main__":
-    fetch_and_clean()
+    run()
