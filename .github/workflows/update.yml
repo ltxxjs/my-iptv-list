@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # 显式增加写权限，确保 Action 有权提交文件到你的仓库
     permissions:
       contents: write
       
@@ -31,8 +30,8 @@ jobs:
         run: |
           git config --global user.name "Github Action"
           git config --global user.email "action@github.com"
-          git add cn_tw.m3u cn_tw.txt
-          # 只有在有变动时才提交，防止 Action 因空提交而显示失败
+          # 关键改动：添加仓库下所有的 txt 和 m3u 文件
+          git add *.txt *.m3u 
           if ! git diff --staged --quiet; then
             git commit -m "Update IPTV lists: $(date +'%Y-%m-%d %H:%M:%S')"
             git push
