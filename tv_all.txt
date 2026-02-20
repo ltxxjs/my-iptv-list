@@ -10,7 +10,6 @@ CCTV-12 (2160p),http://123.175.209.52:9003/hls/13/index.m3u8
 CCTV-12社会与法 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226942/1.m3u8?
 CCTV-13 (1080p),https://cdn3.163189.xyz/163189/cctv13
 CCTV-13新闻 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?
-CCTV-14 (2160p),http://123.175.209.52:9003/hls/15/index.m3u8
 CCTV-14少儿 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226947/1.m3u8?
 CCTV-15 (576p),http://123.175.209.52:9003/hls/16/index.m3u8
 CCTV-15音乐 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?
