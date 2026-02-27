@@ -265,8 +265,6 @@ https://pulltv2.wanfudaluye.com/live/tv2.m3u8
 http://www.dalitv.com.tw:4568/live/dali/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Documentary Humanities Channel
 http://49.113.179.174:4022/udp/238.125.3.135:5140
-#EXTINF:-1 group-title="地方及其他",Dragon TV International (360p)
-http://210.210.155.37/x6bnqe/s/s29/index.m3u8
 #EXTINF:-1 group-title="地方及其他",EBC Financial News (東森財經新聞台) (1080p) [Not 24/7]
 http://seb.sason.top/sc/dscjxw_fhd.m3u8
 #EXTINF:-1 group-title="地方及其他",EBC News (東森新聞台) (1080p) [Not 24/7]
@@ -283,8 +281,6 @@ https://live.streamingfast.net/osmflivech1.m3u8
 https://live.streamingfast.net/osmflivech2.m3u8
 #EXTINF:-1 group-title="地方及其他",Game Channel
 http://49.113.179.174:4022/udp/238.125.1.36:5140
-#EXTINF:-1 group-title="地方及其他",Global News (1080p)
-https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV02.m3u8
 #EXTINF:-1 group-title="地方及其他",Golden Eagle Cartoon
 http://1.24.190.98:10080/hls/51/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Guangzhou TV
@@ -409,8 +405,10 @@ http://49.113.179.174:4022/udp/238.125.0.165:5140
 https://play-qukan.cztv.com/live/1758879019692345.m3u8
 #EXTINF:-1 group-title="地方及其他",Zhejiang TV International
 https://ali-m-l.cztv.com/channels/lantian/channel10/1080p.m3u8
-#EXTINF:-1 group-title="地方及其他",tvN Movies (Indonesian Subtitle) (576p)
-http://210.210.155.37/dr9445/h/h21/index.m3u8
+#EXTINF:-1 group-title="地方及其他",like Gecko Chrome/144.0.0.0 Safari/537.36" group-title="General",Dragon TV International (480p) [Geo-blocked]
+#EXTVLCOPT:http-referrer=https://www.dens.tv/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 Windows NT 10.0; Win64; x64 AppleWebKit/537.36 KHTML, like Gecko Chrome/144.0.0.0 Safari/537.36
+https://op-group1-swiftservesd-1.dens.tv/s/s29/index.m3u8
 #EXTINF:-1 group-title="地方及其他",「B站」CS 2
 https://live.iill.top/bilibili/21622811
 #EXTINF:-1 group-title="地方及其他",「B站」JJ斗地主
@@ -535,8 +533,6 @@ http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226997/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EAw_OvjRgJVjtlaOa0dcgzg%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
 #EXTINF:-1 group-title="地方及其他",中国气象 (576p) [Not 24/7]
 http://hls.weathertv.cn/tslslive/qCFIfHB/hls/live_sd.m3u8
-#EXTINF:-1 group-title="地方及其他",中天新聞台 (1080p)
-https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV28.m3u8
 #EXTINF:-1 group-title="地方及其他",之江纪录
 https://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
 #EXTINF:-1 group-title="地方及其他",乌兰察布新闻
@@ -655,8 +651,6 @@ http://gslbserv.itv.cmvideo.cn:80/3000000001000028638/index.m3u8?channel-id=Fifa
 https://live.iill.top/huya/11601963
 #EXTINF:-1 group-title="地方及其他",唯心電視 (480p)
 https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8
-#EXTINF:-1 group-title="地方及其他",天才衝衝衝 (1080p)
-https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV26.m3u8
 #EXTINF:-1 group-title="地方及其他",女性时尚 (576p)
 http://223.110.245.169/PLTV/4/224/3221227026/index.m3u8
 #EXTINF:-1 group-title="地方及其他",家庭影院 (1080p)
@@ -683,8 +677,6 @@ http://gslbserv.itv.cmvideo.cn:80/3000000020000011523/index.m3u8?channel-id=Fifa
 http://gslbserv.itv.cmvideo.cn:80/3000000020000011528/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011528&livemode=1&stbId=YanG-1989
 #EXTINF:-1 group-title="地方及其他",晴彩篮球「移动」
 http://gslbserv.itv.cmvideo.cn:80/3000000020000011529/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011529&livemode=1&stbId=YanG-1989
-#EXTINF:-1 group-title="地方及其他",東森購物60 (480p)
-https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV18.m3u8
 #EXTINF:-1 group-title="地方及其他",止戈电影「解说」
 https://live.iill.top/huya/19863777
 #EXTINF:-1 group-title="地方及其他",治愈•放松「音乐」
