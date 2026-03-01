@@ -3,17 +3,17 @@
 https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
 #EXTINF:-1 group-title="中央台",CCTV+ 2 (600p) [Not 24/7]
 https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
-#EXTINF:-1 group-title="中央台",CCTV-1 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-1 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/1/index.m3u8
-#EXTINF:-1 group-title="中央台",CCTV-10 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-10 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/11/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-10科教 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226937/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-11 (576p)
+#EXTINF:-1 group-title="中央台",CCTV-11 (576p) [Geo-blocked]
 http://123.175.209.52:9003/hls/12/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-11戏曲 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226334/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-12 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-12 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/13/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-12社会与法 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226942/1.m3u8?
@@ -27,47 +27,47 @@ http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://123.175.209.52:9003/hls/16/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-15音乐 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-16 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-16 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/17/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-16奥林匹克 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227002/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-17 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-17 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/18/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-17农业农村 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226318/1.m3u8?
 #EXTINF:-1 group-title="中央台",CCTV-1综合 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-2 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-2 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/2/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-2财经 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-3 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-3 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/3/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-3综艺 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226471/1.m3u8?
 #EXTINF:-1 group-title="中央台",CCTV-4中文国际 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-5 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-5 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/5/index.m3u8
-#EXTINF:-1 group-title="中央台",CCTV-5+ (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-5+ (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/6/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-5+体育赛事 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226894/1.m3u8?
 #EXTINF:-1 group-title="中央台",CCTV-5体育 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-6 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-6 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/7/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-6电影 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226468/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-7 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-7 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/8/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-7国防军事 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226946/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-8 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-8 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/9/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-8电视剧 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226485/1.m3u8?
-#EXTINF:-1 group-title="中央台",CCTV-9 (2160p)
+#EXTINF:-1 group-title="中央台",CCTV-9 (2160p) [Geo-blocked]
 http://123.175.209.52:9003/hls/10/index.m3u8
 #EXTINF:-1 group-title="中央台",CCTV-9纪录 (IPv6)
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226944/1.m3u8?
@@ -209,6 +209,8 @@ https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/master.m3u8
 https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/master.m3u8
 #EXTINF:-1 group-title="香港频道",RTHK TV 34 (港台電視34) (1080p) [Geo-blocked]
 https://rthktv34-live.akamaized.net/hls/live/2101642/RTHKTV34/master.m3u8
+#EXTINF:-1 group-title="香港频道",RTHK TV 35 (港台電視35) (1080p) [Geo-blocked]
+https://rthktv35-live.akamaized.net/hls/live/2101643/RTHKTV35/master.m3u8
 #EXTINF:-1 group-title="香港频道",TVBS Asia (1080p)
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
 #EXTINF:-1 group-title="香港频道",TVBS News (TVBS新聞台) [Geo-blocked]
@@ -217,6 +219,10 @@ http://seb.sason.top/sc/tvbsxw_fhd.m3u8
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
 #EXTINF:-1 group-title="香港频道",凤凰资讯 (720p)
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
+#EXTINF:-1 group-title="台湾频道",CTS (HUA-CHI CTS) (1080p)
+rtmp://59.124.75.138:1935/sat/tv111
+#EXTINF:-1 tvg-id="CTSNews.tw@SD" tvg-logo="https://i.imgur.com/V1EVtRm.png" group-title="News",CTS News (華視新聞資訊) [Geo-blocked]
+http://seb.sason.top/sc/hsxw_fhd.m3u8
 #EXTINF:-1 group-title="台湾频道",SET News (三立新聞) (1080p) [Geo-blocked]
 http://seb.sason.top/sc/sllive_fhd.m3u8
 #EXTINF:-1 group-title="四川频道",四川妇女儿童 (720p) [Not 24/7]
@@ -247,8 +253,6 @@ http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV
 http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
 #EXTINF:-1 group-title="地方及其他",CGNTV Chinese (1080p)
 https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8
-#EXTINF:-1 group-title="地方及其他",CTS News (華視新聞資訊) [Geo-blocked]
-http://seb.sason.top/sc/hsxw_fhd.m3u8
 #EXTINF:-1 group-title="地方及其他",CTi Variety (中天綜合台) (720p)
 http://23.237.10.66:16372
 #EXTINF:-1 group-title="地方及其他",Channel Law
