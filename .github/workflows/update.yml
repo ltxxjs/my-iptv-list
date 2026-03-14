@@ -11,9 +11,9 @@ jobs:
       contents: write
       
     steps:
-      - uses: actions/checkout@v4 # 升级到 v4
+      - uses: actions/checkout@v4 # 升级解决 Node.js 20 弃用警告
       - name: Set up Python
-        uses: actions/setup-python@v5 # 升级到 v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -33,10 +33,5 @@ jobs:
             git commit -m "Update IPTV lists: $(date +'%Y-%m-%d %H:%M:%S')"
             git push
           else
-            # 即使没变化也更新一个 timestamp，防止 GitHub 自动停掉定时任务
-            echo "No changes, updating heartbeat..."
-            date > heartbeat.txt
-            git add heartbeat.txt
-            git commit -m "Keep-alive sync: $(date)"
-            git push
+            echo "No changes detected."
           fi
