@@ -1,12 +1,11 @@
 import requests
 import re
 import os
-from datetime import datetime
 
-# 1. 定义代理前缀，防止 NameError
+# 1. 定义 PROXY 变量（修复你截图中的 NameError 报错）
 PROXY = "https://gh-proxy.phd.qzz.io/"
 
-# 2. 定义源列表 (包含你最看重的 IPTV-Org 和 地方台补充)
+# 2. 包含你要求的 IPTV-Org 官方源及优质地方台源
 sources = {
     "IPTV_Org_CN": "https://iptv-org.github.io/iptv/countries/cn.m3u",
     "IPTV_Org_HK": "https://iptv-org.github.io/iptv/countries/hk.m3u",
@@ -23,7 +22,7 @@ def get_group(name):
     if "卫视" in n: return "卫视"
     if any(x in n for x in ["香港", "翡翠", "凤凰", "HK", "TVB"]): return "香港频道"
     if any(x in n for x in ["台湾", "TW", "东森", "中视", "三立"]): return "台湾频道"
-    # 常用省份识别
+    # 常用省份分类
     provinces = ["广东", "北京", "上海", "湖南", "浙江", "江苏", "四川", "湖北", "山东", "福建"]
     for p in provinces:
         if p in n: return f"{p}频道"
@@ -34,31 +33,26 @@ def run():
     urls = set()
 
     for s_name, s_url in sources.items():
-        print(f"正在抓取: {s_name}...")
+        print(f"Fetching: {s_name}")
         try:
             r = requests.get(s_url, headers=HEADERS, timeout=30)
             r.encoding = 'utf-8'
             if r.status_code != 200: continue
             
-            # 改进的匹配逻辑，确保抓取更多格式
             items = re.findall(r'#EXTINF:.*?,(.*?)\n(http.*?)(?:\n|$)', r.text, re.DOTALL)
-            
             for name, link in items:
                 link = link.strip().split('\n')[0].strip()
                 if link in urls or not link.startswith("http"): continue
-                
-                name_clean = name.strip()
-                group = get_group(name_clean)
-                all_ch.append({"name": name_clean, "url": link, "group": group, "v6": "[" in link})
+                group = get_group(name.strip())
+                all_ch.append({"name": name.strip(), "url": link, "group": group, "v6": "[" in link})
                 urls.add(link)
-        except Exception as e:
-            print(f"源 {s_name} 抓取跳过: {e}")
+        except: pass
 
-    # 排序：中央 > 卫视 > 港 > 台 > 地方
+    # 排序
     group_order = {"中央台": 0, "卫视": 1, "香港频道": 2, "台湾频道": 3}
     all_ch.sort(key=lambda x: (group_order.get(x['group'], 50), x['group'], x['name']))
 
-    # --- 统一生成所有文本文件 (涵盖你仓库里现有的所有 txt) ---
+    # 统一同步生成你仓库中的所有文件
     target_files = ["cn_tw.txt", "tv_all.txt", "tv_v4.txt"]
     for fname in target_files:
         with open(fname, "w", encoding="utf-8") as f:
@@ -70,14 +64,12 @@ def run():
                 v6_tag = " (IPv6)" if c['v6'] else ""
                 f.write(f"{c['name']}{v6_tag},{c['url']}\n")
 
-    # --- 生成 M3U ---
+    # M3U 格式
     with open("cn_tw.m3u", "w", encoding="utf-8") as f:
         f.write("#EXTM3U\n")
         for c in all_ch:
             v6_tag = " (IPv6)" if c['v6'] else ""
             f.write(f'#EXTINF:-1 group-title="{c["group"]}",{c["name"]}{v6_tag}\n{c["url"]}\n')
-
-    print(f"✨ 同步成功！共处理 {len(all_ch)} 个链接。")
 
 if __name__ == "__main__":
     run()
