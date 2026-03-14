@@ -26,13 +26,13 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          # 使用你要求的模糊匹配，自动追踪所有 txt 和 m3u
+          git config --global user.name "actions-user"
+          git config --global user.email "action@github.com"
+          # 使用你喜欢的模糊匹配，一次性带走所有 txt 和 m3u
           git add *.txt *.m3u
           if ! git diff --staged --quiet; then
             git commit -m "Update IPTV lists: $(date +'%Y-%m-%d %H:%M:%S')"
             git push
           else
-            echo "No changes detected, skipping push."
+            echo "No changes to commit"
           fi
