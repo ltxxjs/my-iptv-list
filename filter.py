@@ -23,7 +23,7 @@ def get_group(name):
     if any(x in n for x in ["香港", "翡翠", "凤凰", "HK", "TVB"]): return "香港频道"
     if any(x in n for x in ["台湾", "TW", "东森", "中视", "三立"]): return "台湾频道"
     # 常用省份分类
-    provinces = ["广东", "北京", "上海", "湖南", "浙江", "江苏", "四川", "湖北", "山东", "福建"]
+    provinces = ["广东", "北京", "上海", "湖南", "浙江", "江苏", "四川", "湖北", "山东", "福建", "山西", "陕西"]
     for p in provinces:
         if p in n: return f"{p}频道"
     return "地方及其他"
