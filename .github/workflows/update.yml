@@ -11,12 +11,11 @@ jobs:
       contents: write
       
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v4 # 升级到 v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # 升级到 v5
         with:
-          python-version: '3.x'
+          python-version: '3.10'
 
       - name: Install dependencies
         run: pip install requests
@@ -28,11 +27,16 @@ jobs:
         run: |
           git config --global user.name "actions-user"
           git config --global user.email "action@github.com"
-          # 使用你喜欢的模糊匹配，一次性带走所有 txt 和 m3u
+          # 使用你喜欢的模糊匹配
           git add *.txt *.m3u
           if ! git diff --staged --quiet; then
             git commit -m "Update IPTV lists: $(date +'%Y-%m-%d %H:%M:%S')"
             git push
           else
-            echo "No changes to commit"
+            # 即使没变化也更新一个 timestamp，防止 GitHub 自动停掉定时任务
+            echo "No changes, updating heartbeat..."
+            date > heartbeat.txt
+            git add heartbeat.txt
+            git commit -m "Keep-alive sync: $(date)"
+            git push
           fi
