@@ -230,8 +230,6 @@ rtmp://59.124.75.138:1935/sat/tv111
 http://seb.sason.top/sc/hsxw_fhd.m3u8
 #EXTINF:-1 group-title="台湾频道",SET News (三立新聞) (1080p) [Geo-blocked]
 http://seb.sason.top/sc/sllive_fhd.m3u8
-#EXTINF:-1 group-title="内蒙古频道",内蒙古 (576p)
-http://223.110.245.161/ott.js.chinamobile.com/PLTV/3/224/3221225836/index.m3u8
 #EXTINF:-1 group-title="北京频道",北京衛視 (1080p) [Geo-blocked]
 http://14.152.88.77/liveplay-kk.rtxapp.com/live/program/live/bjwshd/4000000/mnf.m3u8
 #EXTINF:-1 group-title="四川频道",四川妇女儿童 (720p) [Not 24/7]
@@ -378,13 +376,13 @@ https://lbs-us1.suprememastertv.com/720p.m3u8
 https://chibrics.mediacdn.ru/cdn/brics/chinese/playlist.m3u8
 #EXTINF:-1 group-title="地方及其他",Taiwan Indigenous TV (原住民電視) (720p)
 http://streamipcf.akamaized.net/live/_definst_/live_720/key_b1500.m3u8
-#EXTINF:-1 group-title="地方及其他",Tonghua TV
+#EXTINF:-1 group-title="地方及其他",Tonghua TV (1080p)
 http://lsfb.avap.jilintv.cn/zqvk7vpj/channel/43ea5771aa44421591f9dfd2b71f1b9b/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Toonmax TV
 http://49.113.179.174:4022/udp/238.125.4.28:5140
 #EXTINF:-1 group-title="地方及其他",Ugo Shop TV
 http://49.113.179.174:4022/udp/238.125.4.184:5140
-#EXTINF:-1 group-title="地方及其他",VOA美国之音
+#EXTINF:-1 group-title="地方及其他",VOA美国之音 (1080p)
 https://voa-ingest.akamaized.net/hls/live/2033878/tvmc08/playlist.m3u8
 #EXTINF:-1 group-title="地方及其他",World Economy Channel
 http://49.113.179.174:4022/udp/238.125.2.205:5140
@@ -412,6 +410,9 @@ https://ali-m-l.cztv.com/channels/lantian/channel10/1080p.m3u8
 #EXTVLCOPT:http-referrer=https://www.dens.tv/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 Windows NT 10.0; Win64; x64 AppleWebKit/537.36 KHTML, like Gecko Chrome/144.0.0.0 Safari/537.36
 https://op-group1-swiftservesd-1.dens.tv/s/s29/index.m3u8
+#EXTINF:-1 group-title="地方及其他",like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Undefined",Nei Monggol TV (960p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+https://cdn4.skygo.mn/live/disk1/NeigMGL/HLSv3-FTA/NeigMGL.m3u8
 #EXTINF:-1 group-title="地方及其他",「B站」CS 2
 https://live.iill.top/bilibili/21622811
 #EXTINF:-1 group-title="地方及其他",「B站」JJ斗地主
