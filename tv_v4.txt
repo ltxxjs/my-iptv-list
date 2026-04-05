@@ -12,7 +12,7 @@ CCTV-13新闻 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/14/index.m3u8
 CCTV-14少儿 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226947/1.m3u8?
 CCTV-15 (576p),http://123.175.209.52:9003/hls/16/index.m3u8
 CCTV-15音乐 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?
-CCTV-16 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/17/index.m3u8
+CCTV-16,http://74.91.26.218:82/live/cctv16hd.m3u8
 CCTV-16奥林匹克 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227002/1.m3u8?
 CCTV-17 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/18/index.m3u8
 CCTV-17农业农村 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226318/1.m3u8?
