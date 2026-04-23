@@ -260,6 +260,8 @@ http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
 https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8
 #EXTINF:-1 group-title="地方及其他",CTi Variety (中天綜合台) (720p)
 http://23.237.10.66:16372
+#EXTINF:-1 group-title="地方及其他",Celestial Movies (576i)
+http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8
 #EXTINF:-1 group-title="地方及其他",Channel Law
 http://49.113.179.174:4022/udp/238.125.2.201:5140
 #EXTINF:-1 group-title="地方及其他",Chifeng Comprehensive News Chanel
