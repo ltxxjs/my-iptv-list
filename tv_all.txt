@@ -1,38 +1,27 @@
 中央台,#genre#
 CCTV+ 1 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
 CCTV+ 2 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
-CCTV-1 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/1/index.m3u8
 CCTV-10科教 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226937/1.m3u8?
-CCTV-11 (576p) [Geo-blocked],http://123.175.209.52:9003/hls/12/index.m3u8
 CCTV-11戏曲 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226334/1.m3u8?
-CCTV-12 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/13/index.m3u8
 CCTV-12社会与法 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226942/1.m3u8?
+CCTV-13 (1080p),https://cdn3.163189.xyz/163189/cctv13
 CCTV-13新闻 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?
-CCTV-13新闻 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/14/index.m3u8
 CCTV-14少儿 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226947/1.m3u8?
-CCTV-15 (576p),http://123.175.209.52:9003/hls/16/index.m3u8
 CCTV-15音乐 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?
 CCTV-16,http://74.91.26.218:82/live/cctv16hd.m3u8
 CCTV-16奥林匹克 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227002/1.m3u8?
-CCTV-17 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/18/index.m3u8
 CCTV-17农业农村 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226318/1.m3u8?
 CCTV-1综合 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?
-CCTV-2 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/2/index.m3u8
 CCTV-2财经 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?
-CCTV-3 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/3/index.m3u8
 CCTV-3综艺 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226471/1.m3u8?
 CCTV-4中文国际 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?
-CCTV-5 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/5/index.m3u8
-CCTV-5+ (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/6/index.m3u8
+CCTV-5+ (576i),http://69.30.246.194/live/cctv5p.m3u8
 CCTV-5+体育赛事 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226894/1.m3u8?
 CCTV-5体育 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?
-CCTV-6 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/7/index.m3u8
 CCTV-6电影 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226468/1.m3u8?
-CCTV-7 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/8/index.m3u8
 CCTV-7国防军事 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226946/1.m3u8?
-CCTV-8 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/9/index.m3u8
 CCTV-8电视剧 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226485/1.m3u8?
-CCTV-9 (2160p) [Geo-blocked],http://123.175.209.52:9003/hls/10/index.m3u8
+CCTV-9 (576i),https://xykt-fix.github.io/Y77.m3u8
 CCTV-9纪录 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226944/1.m3u8?
 CGTN俄语,https://0472.org/hls/cgtne.m3u8
 CGTN法语,https://0472.org/hls/cgtnf.m3u8
