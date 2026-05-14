@@ -1,26 +1,38 @@
 中央台,#genre#
 CCTV+ 1 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8
 CCTV+ 2 (600p) [Not 24/7],https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
+CCTV-1 (720p),http://74.91.26.218:82/live/cctv1hd.m3u8
+CCTV-10 (720p),http://74.91.26.218:82/live/cctv10hd.m3u8
 CCTV-10科教 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226937/1.m3u8?
+CCTV-11 (720p),http://74.91.26.218:82/live/cctv11hd.m3u8
 CCTV-11戏曲 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226334/1.m3u8?
+CCTV-12 (720p),http://74.91.26.218:82/live/cctv12hd.m3u8
 CCTV-12社会与法 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226942/1.m3u8?
 CCTV-13 (1080p),https://cdn3.163189.xyz/163189/cctv13
 CCTV-13新闻 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?
+CCTV-14 (1080p),http://74.91.26.218:82/live/cctv14hd.m3u8
 CCTV-14少儿 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226947/1.m3u8?
+CCTV-15 (720p),http://74.91.26.218:82/live/cctv15hd.m3u8
 CCTV-15音乐 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?
-CCTV-16,http://74.91.26.218:82/live/cctv16hd.m3u8
+CCTV-16 (1080p),http://74.91.26.218:82/live/cctv16hd.m3u8
 CCTV-16奥林匹克 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227002/1.m3u8?
+CCTV-17 (1080p),http://74.91.26.218:82/live/cctv17hd.m3u8
 CCTV-17农业农村 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226318/1.m3u8?
 CCTV-1综合 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?
+CCTV-2 (720p),http://74.91.26.218:82/live/cctv2hd.m3u8
 CCTV-2财经 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226893/1.m3u8?
+CCTV-3 (720p),http://74.91.26.218:82/live/cctv3hd.m3u8
 CCTV-3综艺 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226471/1.m3u8?
 CCTV-4K (1080p),http://198.204.240.250:82/live/cctv4k.m3u8
 CCTV-4中文国际 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226335/1.m3u8?
-CCTV-5+ (576i),http://69.30.246.194/live/cctv5p.m3u8
+CCTV-5 (720p),http://74.91.26.218:82/live/cctv5hd.m3u8
+CCTV-5+ (720p),http://192.151.150.154/live/cctv5p.m3u8
 CCTV-5+体育赛事 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226894/1.m3u8?
 CCTV-5体育 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226469/1.m3u8?
 CCTV-6电影 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226468/1.m3u8?
+CCTV-7 (720p),http://74.91.26.218:82/live/cctv7hd.m3u8
 CCTV-7国防军事 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226946/1.m3u8?
+CCTV-8 (720p),http://74.91.26.218:82/live/cctv8hd.m3u8
 CCTV-8K (1080p),http://198.204.240.250:82/live/cctv8k.m3u8
 CCTV-8电视剧 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226485/1.m3u8?
 CCTV-9 (576i),https://xykt-fix.github.io/Y77.m3u8
@@ -31,8 +43,6 @@ CGTN英语,https://0472.org/hls/cgtn.m3u8
 CGTN西语,https://0472.org/hls/cgtnx.m3u8
 CGTN记录,https://0472.org/hls/cgtnd.m3u8
 CGTN阿语,https://0472.org/hls/cgtna.m3u8
-like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Education",CCTV-10 (576i)
-#EXTVLCOPT:http-user-agent=#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36,https://cdn4.skygo.mn/live/disk1/CCTV-10/HLSv3-FTA/CCTV-10.m3u8
 卫视,#genre#
 东南卫视 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226991/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EQ6F5Mjgs0tJyEArWFL3vQA%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
 东方卫视 (IPv6),http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226898/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E0uh4lyjjBCCN7TCq21vSIQ%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
@@ -116,7 +126,7 @@ SET News (三立新聞) (1080p) [Geo-blocked],http://seb.sason.top/sc/sllive_fhd
 四川妇女儿童 (720p) [Not 24/7],http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8
 地方及其他,#genre#
 ABN China (720p),https://mediaserver.abnvideos.com/streams/abnchina.m3u8
-Ando TV,http://play.kankanlive.com/live/1711956137852982.m3u8
+Ando TV (1080p),http://play.kankanlive.com/live/1711956137852982.m3u8
 Angel TV Chinese (720p),https://janya-digimix.akamaized.net/vglive-sk-999451/chinese/ngrp:angelchinese_all/playlist.m3u8
 Anshun Comprehensive News Channel,https://hplayer1.juyun.tv/camera/154379194.m3u8
 BRTV Kaku Childrens Channel,http://49.113.179.174:4022/udp/238.125.2.216:5140
