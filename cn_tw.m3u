@@ -311,6 +311,8 @@ https://live.streamingfast.net/osmflivech2.m3u8
 https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
 #EXTINF:-1 group-title="地方及其他",HOY Infotainment (1080p) [Geo-blocked]
 https://hoytv-live-stream.hoy.tv/ch78/index.m3u8
+#EXTINF:-1 group-title="地方及其他",HOY International Business Channel (1080p) [Geo-blocked]
+https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
 #EXTINF:-1 group-title="地方及其他",HOY TV (1080p) [Geo-blocked]
 https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Harbin Comprehensive News Channel

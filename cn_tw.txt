@@ -162,6 +162,7 @@ GOOD TV CH1 綜合台 (720p) [Not 24/7],https://live.streamingfast.net/osmflivec
 GOOD TV CH2 真理台 (720p),https://live.streamingfast.net/osmflivech2.m3u8
 Guangzhou TV,https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
 HOY Infotainment (1080p) [Geo-blocked],https://hoytv-live-stream.hoy.tv/ch78/index.m3u8
+HOY International Business Channel (1080p) [Geo-blocked],https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
 HOY TV (1080p) [Geo-blocked],https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
 Harbin Comprehensive News Channel,https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594
 Harbin Movie Channel,https://stream.hrbtv.net/yspd/playlist.m3u8
