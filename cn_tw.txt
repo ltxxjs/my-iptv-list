@@ -89,6 +89,7 @@ Bread TV面包台 (720p),https://video.bread-tv.com:8091/hls-live24/online/index
 CETV1 (576p),http://117.161.133.51:81/gitv_live/G_CETV-1/G_CETV-1.m3u8?p=GITV
 CETV2 (576p),http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
 CGNTV Chinese (1080p),https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8
+CND Film Middle School Channel,http://live-play.zxstv.com.cn/zhongxuesheng/zhongxuesheng.m3u8
 CTi Variety (中天綜合台) (720p),http://23.237.10.66:16372
 Celestial Movies (576i),http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8
 Chifeng Comprehensive News Chanel,http://play1-qk.nmtv.cn/live/1735546697341033.m3u8
