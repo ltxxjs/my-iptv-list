@@ -106,6 +106,7 @@ Guangzhou TV,https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
 HOY Infotainment (1080p) [Geo-blocked],https://hoytv-live-stream.hoy.tv/ch78/index.m3u8
 HOY International Business Channel (1080p) [Geo-blocked],https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
 HOY TV (1080p) [Geo-blocked],https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
+Hakka TV,https://hc9lby9bzw8zcar.wcetv.com/hls/hakkatv.m3u8
 Harbin Comprehensive News Channel,https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594
 Harbin Movie Channel,https://stream.hrbtv.net/yspd/playlist.m3u8
 Hebei TV (2160p),https://event.pull.hebtv.com/live/live101.m3u8
