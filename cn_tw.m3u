@@ -231,6 +231,10 @@ https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/0a76740c72b74fabae611845aa21e06a/i
 https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/906341e6f19b4c4bacdc89941eb85d12/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Jilin Rural Channel
 https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/3ffc4824dce54b92be185555923ce382/index.m3u8
+#EXTINF:-1 group-title="地方及其他",Lanzhou Comprehensive News Channel
+https://liveplus.lzr.com.cn/xwzh/HD/live.m3u8
+#EXTINF:-1 group-title="地方及其他",Lanzhou Culture & Tourism Channel
+https://liveplus.lzr.com.cn/wlpd/HD/live.m3u8
 #EXTINF:-1 group-title="地方及其他",Liangshan TV [Not 24/7]
 http://118.122.2.29:9999/hls/47/index.m3u8
 #EXTINF:-1 group-title="地方及其他",NTD TV Asia-Pacific
