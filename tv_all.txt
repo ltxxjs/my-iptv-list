@@ -55,7 +55,6 @@ BRTV 北京卫视 (1080p),http://go.bkpcp.top/mg/bjws
 浙江卫视 (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
 海南卫视 (576p),http://118.81.195.79:9003/hls/28/index.m3u8
 湖北卫视 (1080p),http://118.81.195.79:9003/hls/32/index.m3u8
-甘肃卫视 (576p),http://118.81.195.79:9003/hls/25/index.m3u8
 贵州卫视 (576p),http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
 辽宁卫视 (1080p),http://39.134.39.37/PLTV/88888888/224/3221226209/index.m3u8
 重庆卫视 (1080p),http://118.81.195.79:9003/hls/22/index.m3u8
@@ -82,7 +81,7 @@ SET News (三立新聞) (1080p) [Geo-blocked],http://seb.sason.top/sc/sllive_fhd
 四川妇女儿童 (720p) [Not 24/7],http://scgctvshow.sctv.com/hdlive/sctv7/index.m3u8
 地方及其他,#genre#
 ABN China (720p),https://mediaserver.abnvideos.com/streams/abnchina.m3u8
-AXN Asia Taiwan (720p),https://play.wenxiang.cn/live/1a88465f153e1dd2108fd791bf4f25f7.flv
+AXN Asia Taiwan (1080p),http://125.227.210.55:4050/VideoInput/play.ts
 Ando TV (1080p),http://play.kankanlive.com/live/1711956137852982.m3u8
 Angel TV Chinese (720p),https://janya-digimix.akamaized.net/vglive-sk-999451/chinese/ngrp:angelchinese_all/playlist.m3u8
 Anhui TV,https://restream.pdtvhd.com/memfs/c1cd2ed0-3b2b-4c25-af98-a7fb0b1eb130.m3u8
