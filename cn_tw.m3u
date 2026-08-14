@@ -71,14 +71,10 @@ http://38.75.136.137:98/gslb/dsdqpub/nxss.m3u8?auth=testpub
 http://38.75.136.137:98/gslb/dsdqpub/sjdl.m3u8?auth=testpub
 #EXTINF:-1 group-title="卫视",BRTV 北京卫视 (1080p)
 http://go.bkpcp.top/mg/bjws
-#EXTINF:-1 group-title="卫视",东方卫视 (2160p)
-http://118.81.195.79:9003/hls/23/index.m3u8
 #EXTINF:-1 group-title="卫视",云南卫视 (1080p)
 https://hwapi.yunshicloud.com/8xughf/e0bx15.m3u8
 #EXTINF:-1 group-title="卫视",兵团卫视 (540p) [Not 24/7]
 http://112.25.48.68/live/program/live/btws/1300000/mnf.m3u8
-#EXTINF:-1 group-title="卫视",吉林卫视 (2160p)
-http://118.81.195.79:9003/hls/34/index.m3u8
 #EXTINF:-1 group-title="卫视",四川卫视 (576p)
 http://39.134.115.163:8080/PLTV/88888910/224/3221225733/index.m3u8
 #EXTINF:-1 group-title="卫视",天津卫视 (1080p)
@@ -89,36 +85,20 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225726/index.m3u8
 http://39.134.115.163:8080/PLTV/88888910/224/3221225697/index.m3u8
 #EXTINF:-1 group-title="卫视",山东卫视 (720p)
 http://125.210.152.18:9090/live/SDWSHD_H265.m3u8
-#EXTINF:-1 group-title="卫视",山西卫视 (2160p)
-http://118.81.195.79:9003/hls/19/index.m3u8
-#EXTINF:-1 group-title="卫视",广东卫视 (2160p)
-http://118.81.195.79:9003/hls/26/index.m3u8
-#EXTINF:-1 group-title="卫视",广西卫视 (576p)
-http://118.81.195.79:9003/hls/27/index.m3u8
 #EXTINF:-1 group-title="卫视",康巴卫视 (720p) [Not 24/7]
 http://scgctvshow.sctv.com/hdlive/kangba/1.m3u8
 #EXTINF:-1 group-title="卫视",江苏卫视 (1080p)
 http://39.134.24.166/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226200/index.m3u8
 #EXTINF:-1 group-title="卫视",江西卫视 (1080p)
 http://39.134.115.163:8080/PLTV/88888910/224/3221225705/index.m3u8
-#EXTINF:-1 group-title="卫视",河南卫视 (2160p)
-http://118.81.195.79:9003/hls/30/index.m3u8
 #EXTINF:-1 group-title="卫视",浙江卫视 (1080p)
 http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
-#EXTINF:-1 group-title="卫视",海南卫视 (576p)
-http://118.81.195.79:9003/hls/28/index.m3u8
-#EXTINF:-1 group-title="卫视",湖北卫视 (1080p)
-http://118.81.195.79:9003/hls/32/index.m3u8
 #EXTINF:-1 group-title="卫视",贵州卫视 (576p)
 http://183.207.248.71/gitv/live1/G_GUIZHOU/G_GUIZHOU
 #EXTINF:-1 group-title="卫视",辽宁卫视 (1080p)
 http://39.134.39.37/PLTV/88888888/224/3221226209/index.m3u8
-#EXTINF:-1 group-title="卫视",重庆卫视 (1080p)
-http://118.81.195.79:9003/hls/22/index.m3u8
 #EXTINF:-1 group-title="卫视",青海卫视 (576p)
 http://39.134.115.163:8080/PLTV/88888910/224/3221225727/index.m3u8
-#EXTINF:-1 group-title="卫视",黑龙江卫视 (2160p)
-http://118.81.195.79:9003/hls/31/index.m3u8
 #EXTINF:-1 group-title="港澳频道",RTHK TV 31 (港台電視31) (1080p) [Geo-blocked]
 https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
 #EXTINF:-1 group-title="港澳频道",RTHK TV 32 (港台電視32) (1080p) [Geo-blocked]
@@ -197,6 +177,8 @@ http://seb.sason.top/ptv/ftv.php?id=dy
 https://live.streamingfast.net/osmflivech1.m3u8
 #EXTINF:-1 group-title="地方及其他",GOOD TV CH2 真理台 (720p)
 https://live.streamingfast.net/osmflivech2.m3u8
+#EXTINF:-1 group-title="地方及其他",Guangdong Satellite TV
+https://h5cul1yar48um3t.wcetv.com/hls/gdsatellite.m3u8
 #EXTINF:-1 group-title="地方及其他",Guangzhou TV
 https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
 #EXTINF:-1 group-title="地方及其他",HOY Infotainment (1080p) [Geo-blocked]
@@ -373,3 +355,5 @@ http://223.110.243.134/PLTV/4/224/3221225937/index.m3u8
 http://223.110.245.151/ott.js.chinamobile.com/PLTV/3/224/3221225923/index.m3u8
 #EXTINF:-1 group-title="江苏频道",江苏综艺 (576p) [Not 24/7]
 http://183.207.248.71/gitv/live1/G_JSZY/G_JSZY
+#EXTINF:-1 group-title="黑龙江频道",黑龙江 (1080p)
+http://223.110.245.161/ott.js.chinamobile.com/PLTV/3/224/3221227492/index.m3u8
