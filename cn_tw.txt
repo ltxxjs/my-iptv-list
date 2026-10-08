@@ -82,6 +82,7 @@ DaAi 1 (720p),https://pulltv1.wanfudaluye.com/live/tv1.m3u8
 DaAi 2 (1080p),http://nmk.ioapk.com:5050/4gtv-live106/index.m3u8
 Dali TV (720p),http://www.dalitv.com.tw:4568/live/dali/index.m3u8
 Documentary Humanities Channel (1080p),http://39.135.138.59:18890/PLTV/88888910/224/3221225655/index.m3u8
+Dongguan Comprehensive News Channel,https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8
 Dragon TV International,https://restream.pdtvhd.com/memfs/0b1b95c9-3543-4af9-9fdb-cf45f1602f17.m3u8
 Dunhuang TV (1080p),http://117.156.28.119/270000001111/1110000028/index.m3u8
 EBC Financial News (1080p) [Not 24/7],http://seb.sason.top/sc/dscjxw_fhd.m3u8
