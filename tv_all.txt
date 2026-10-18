@@ -196,4 +196,3 @@ Zhejiang International Channel,https://ali-m-l.cztv.com/channels/lantian/channel
 Zhejiang Satellite TV (1080p),http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
 like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Undefined",Nei Monggol TV (960p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36,https://cdn4.skygo.mn/live/disk1/NeigMGL/HLSv3-FTA/NeigMGL.m3u8
-tvN Asia HD (720p),http://58.8.186.128:10005/bysid/2518
