@@ -109,7 +109,7 @@ http://223.111.191.105/downflv.brtvcloud.com/kkkkasd/winfr.m3u8
 http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
 #EXTINF:-1 group-title="地方及其他",Baicheng TV [Geo-blocked]
 https://stream2.jlntv.cn/baicheng1/sd/live.m3u8
-#EXTINF:-1 group-title="地方及其他",Beautiful Life TV
+#EXTINF:-1 group-title="地方及其他",Beautiful Life TV (720p)
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8
 #EXTINF:-1 group-title="地方及其他",Beijing Satellite TV HD (1080p)
 http://go.bkpcp.top/mg/bjws
@@ -164,7 +164,7 @@ http://125.227.210.55:1004/VideoInput/play.ts
 #EXTINF:-1 group-title="地方及其他",Documentary Humanities Channel (1080p)
 http://39.135.138.59:18890/PLTV/88888910/224/3221225655/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Dongguan Comprehensive News Channel
-https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8
+http://stream.sun0769.com/dgrtv1/mp4tv1_1500.flv
 #EXTINF:-1 group-title="地方及其他",Dragon TV International
 https://restream.pdtvhd.com/memfs/0b1b95c9-3543-4af9-9fdb-cf45f1602f17.m3u8
 #EXTINF:-1 group-title="地方及其他",Dunhuang TV (1080p)
@@ -182,7 +182,7 @@ http://seb.sason.top/ptv/ftv.php?id=dy
 #EXTINF:-1 group-title="地方及其他",Fengshang Shopping Channel (1080p)
 http://183.207.248.71/cntv/live1/fengshanggw/fengshanggw
 #EXTINF:-1 group-title="地方及其他",Fujian Comprehensive Channel
-http://120.39.52.202:5140/%E7%A6%8F%E5%BB%BA%E7%BB%BC%E5%90%88
+http://120.39.52.202:5140/福建综合
 #EXTINF:-1 group-title="地方及其他",Golden Eagle Cartoon (576p)
 http://223.110.245.145/ott.js.chinamobile.com/PLTV/3/224/3221226303/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Golden Jade (1080p)
@@ -194,7 +194,7 @@ https://live.streamingfast.net/osmflivech1.m3u8
 #EXTINF:-1 group-title="地方及其他",Guangdong Satellite TV
 https://h5cul1yar48um3t.wcetv.com/hls/gdsatellite.m3u8
 #EXTINF:-1 group-title="地方及其他",Guangxi Variety & Travel Channel
-http://111.59.24.227:8181/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
+http://111.59.24.227:8181/tsfile/live/1001_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 group-title="地方及其他",Guangzhou TV
 https://tencentplaybusiness.gztv.com/live/zonghes.m3u8
 #EXTINF:-1 group-title="地方及其他",Guizhou TV (576p)
@@ -290,7 +290,7 @@ http://39.134.39.37/PLTV/88888888/224/3221226209/index.m3u8
 #EXTINF:-1 group-title="地方及其他",MOMO TV (1080p)
 http://nmk.ioapk.com:5050/4gtv-live107/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Mei Ah Movie Channel (1080p)
-http://103.172.187.30:12000/stream/mytv/null-9/master.m3u8
+http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
 #EXTINF:-1 group-title="地方及其他",NTD TV Asia-Pacific
 https://live.ntdtv.com/aplive200/playlist.m3u8
 #EXTINF:-1 group-title="地方及其他",Nanchang News & Generalist Channel
@@ -310,17 +310,17 @@ http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Pingxiang TV News Channel (576p) [Not 24/7]
 http://www.pxitv.com:8099/hls-live/livepkgr/_definst_/pxitvevent/pxtv1stream.m3u8
 #EXTINF:-1 group-title="地方及其他",QTV-1
-http://video10.qtv.com.cn/drm/qtv1at/manifest.m3u8
+http://119.166.53.110:85/tsfile/live/1000_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 group-title="地方及其他",QTV-2
 http://video10.qtv.com.cn/drm/qtv2at/manifest.m3u8
 #EXTINF:-1 group-title="地方及其他",QTV-3
-http://video10.qtv.com.cn/drm/qtv3at/manifest.m3u8
+http://119.166.53.110:85/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 group-title="地方及其他",QTV-4
-http://video10.qtv.com.cn/drm/qtv4at/manifest.m3u8
+http://119.166.53.110:85/tsfile/live/1004_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 group-title="地方及其他",QTV-5
 http://video10.qtv.com.cn/drm/qtv5at/manifest.m3u8
 #EXTINF:-1 group-title="地方及其他",QTV-6
-http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8
+http://119.166.53.110:85/tsfile/live/0002_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 group-title="地方及其他",Qianjiang Channel
 rtmp://splay-qukan.cztv.com/live/1792059352668052?auth_key=1886667371-a351173879224e5fbbb4412bf9f96eff-0-de13c2186941a507a27a3438213d2169
 #EXTINF:-1 tvg-id="QinghaiTV.cn@SD" tvg-logo="https://i.imgur.com/Nyuxo8S.png" group-title="Undefined",Qinghai TV (576p)
@@ -383,8 +383,6 @@ https://klmysjtzb.rcsxzx.com/hls/klmy2.m3u8
 http://110.153.180.106:55555/out_3/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Xinjiang TV 3
 http://110.153.180.106:55555/out_2/index.m3u8
-#EXTINF:-1 group-title="地方及其他",Xinjiang TV 5
-http://120.70.60.179:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 group-title="地方及其他",Xinjiang TV 8
 http://120.70.60.179:9901/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 group-title="地方及其他",Xizang TV Chinese
