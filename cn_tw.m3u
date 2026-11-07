@@ -393,6 +393,10 @@ https://live.vtibet.cn/live/ZYWS20261016.stream.m3u8
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221225947/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Yanbian Satellite TV (576p)
 http://223.110.245.139/PLTV/4/224/3221227008/index.m3u8
+#EXTINF:-1 group-title="地方及其他",Yichang Sanxia General Channel
+https://liveplay.ycrmt.cn/sxgd/zhpd.m3u8
+#EXTINF:-1 group-title="地方及其他",Yichang Sanxia Travel & Life Channel
+https://liveplay.ycrmt.cn/sxgd/lysh.m3u8
 #EXTINF:-1 group-title="地方及其他",You Man Cartoon Channel (576p)
 http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8
 #EXTINF:-1 group-title="地方及其他",Yunnan Satellite TV (1080p)
