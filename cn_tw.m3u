@@ -95,7 +95,7 @@ http://125.227.210.55:4050/VideoInput/play.ts
 http://play.kankanlive.com/live/1711956137852982.m3u8
 #EXTINF:-1 group-title="地方及其他",Angel TV Chinese (720p)
 https://janya-digimix.akamaized.net/vglive-sk-999451/chinese/ngrp:angelchinese_all/playlist.m3u8
-#EXTINF:-1 group-title="地方及其他",Anhui TV
+#EXTINF:-1 group-title="地方及其他",Anhui TV (1080p)
 https://restream.pdtvhd.com/memfs/c1cd2ed0-3b2b-4c25-af98-a7fb0b1eb130.m3u8
 #EXTINF:-1 group-title="地方及其他",Animax Asia Taiwan
 http://125.227.210.55:3056/VideoInput/play.ts
